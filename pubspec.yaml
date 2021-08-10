@@ -1,0 +1,19 @@
+name: blog_gen
+description: A sample command-line application.
+version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  markdown: ^4.0.0
+  jinja: ^0.3.4
+  highlight: ^0.7.0
+  http: ^0.13.3
+  intl: ^0.17.0
+  path: ^1.8.0
+
+
+dev_dependencies:
+  test: ^1.16.0

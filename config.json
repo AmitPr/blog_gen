@@ -1,0 +1,11 @@
+{
+    "author": "",
+    "siteName": "Unnamed Blog",
+    "siteDescription": "Placeholder description",
+    "contentDirectory": "test/content",
+    "templateDirectory": "test/templates",
+    "outputDirectory": "test/output",
+    "ignoredFiles": [
+        ".DS_Store"
+    ]
+}

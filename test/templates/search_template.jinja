@@ -1,0 +1,11 @@
+[
+    {% for post in posts %} {
+        "title": "{{ post.title | escape}}",
+        "tags": "{{ post.tags }}",
+        "url": "{{ post.url }}",
+        "createdAt": "{{ post.createdAt }}",
+        "description": "{{ post.description | escape}}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+
+]
