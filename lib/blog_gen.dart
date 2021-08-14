@@ -37,6 +37,8 @@ List<Post> processPosts(CONFIG config) {
       entity.copySync(outputFilePath);
     }
   }
+  posts.sort((a, b) =>
+      a.attributes['createdAt'].compareTo(b.attributes['createdAt']) * -1);
   posts.forEach(
     (post) {
       File(path.join(config.outputDirectory, post.path, 'index.html'))
