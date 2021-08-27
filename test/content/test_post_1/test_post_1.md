@@ -1,7 +1,7 @@
-
+type: post
 title: Test Post 1
 description: Test Description 1
-createdAt: 2021-01-01
+createdAt: 2021-01-02
 tags: Test, Tag, Post
 
 ---

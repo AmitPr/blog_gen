@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ CONFIG.siteName }}</title>
+    <title>{{ constants.siteName }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ CONFIG.siteDescription }}">
-    <meta name="author" content="{{ CONFIG.author.name }}">
-    <link rel="shortcut icon" href="{{ CONFIG.siteIcon }}">
+    <meta name="description" content="{{ constants.siteDescription }}">
+    <meta name="author" content="{{ author.name }}">
+    <link rel="shortcut icon" href="{{ constants.siteIcon }}">
 
 </head>
 
@@ -16,18 +16,18 @@
     <div class="header">
         <div class="subheader" style="text-align: center;">
             <div class="avatar-container">
-                <a href="{{CONFIG.author.html_url}}">
-                    <img src="{{CONFIG.author.avatar_url}}" class="avatar avatar-big" alt="{{CONFIG.author.name}}" />
+                <a href="{{author.url}}">
+                    <img src="{{author.icon}}" class="avatar avatar-big" alt="{{author.name}}" />
                 </a>
             </div>
-            <a href="{{CONFIG.author.html_url}}">{{CONFIG.author.name}}</a>
+            <a href="{{author.url}}">{{author.name}}</a>
         </div>
         <div class="siteInfo">
-            <p>{{CONFIG.siteDescription}}</p>
+            <p>{{constants.siteDescription}}</p>
         </div>
     </div>
     <h1>Recent Posts</h1>
-    {% for post in posts %}
+    {% for post in posts|sort(attribute="createdAt") %}
     <a href="{{post.url}}" style="text-decoration: none;">
         <h2 class="post-title">{{post.title}}</h2>
     </a>

@@ -1,9 +1,9 @@
 [
- {
+     {
         "title": "Test Post 1",
-        "tags": "Test, Tag, Post",
-        "url": "/test_post_1",
-        "createdAt": "January 1, 2021",
+        "tags": "[&#39;Test&#39;, &#39;Tag&#39;, &#39;Post&#39;]",
+        "url": "test_post_1",
+        "createdAt": "2021-01-02 00:00:00",
         "description": "Test Description 1"
-    }
+    }  
 ]

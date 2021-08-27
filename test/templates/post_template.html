@@ -3,24 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ post.title }} - {{ CONFIG.siteName }}</title>
+    <title>{{ post.title }} - {{ constants.siteName }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ post.description }}">
-    <meta name="author" content="{{ CONFIG.author.name }}">
-    <link rel="shortcut icon" href="{{ CONFIG.siteIcon }}">
+    <meta name="author" content="{{ author.name }}">
+    <link rel="shortcut icon" href="{{ constants.siteIcon }}">
 </head>
 
 <body>
     <div class="header">
         <h1>{{ post.title }}</h1>
         <div class="subheader">
-            <a href="{{CONFIG.author.html_url}}"><img src="{{CONFIG.author.avatar_url}}" class="avatar" alt="{{CONFIG.author.name}}" /></a>
-            <a href="{{CONFIG.author.html_url}}">{{CONFIG.author.name}}</a>
+            <a href="{{author.url}}"><img src="{{author.icon}}" class="avatar" alt="{{author.name}}" /></a>
+            <a href="{{author.url}}">{{author.name}}</a>
             <p class="subdued">/ {{post.createdAt}}</p>
         </div>
         <article>
-            {{ post.formattedContent }}
+            {{ utils.markdown(post.content) }}
         </article>
         <div class="footer">
             <a href="/">Back to home</a>
