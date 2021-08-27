@@ -1,2 +1,2 @@
 # Blog
-A repository hosting the content, and static site generator for [my blog](https://blog.amitprasad.dev). Uses dart, and the `markdown` and `jinja` packages available on [pub.dev](https://pub.dev).
+A repository hosting the content, and static site generator for [my blog](https://blog.amitprasad.dev). Rewritten to use python and the `marko`, `jinja2`, and `pygments` libraries.
