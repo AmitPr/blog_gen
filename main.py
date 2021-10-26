@@ -94,7 +94,7 @@ class Main:
                         if type_str == 'post':
                             self.posts.append(
                                 Post(''.join(f.readlines()), os.path.relpath(root,self.content_dir)))
-
+        self.posts.sort(key=lambda x: x.createdAt, reverse=True)
         self.env.globals['posts'] = self.posts
 
     def render_content(self):
